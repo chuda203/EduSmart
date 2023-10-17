@@ -25,4 +25,19 @@
         android:name="com.dasadarsa.edusmart.ChatFragment"
         android:label="fragment_chat"
         tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/fragment_selesai"
+        android:name="com.dasadarsa.edusmart.Fragment_selesai"
+        android:label="fragment_selesai"
+        tools:layout="@layout/fragment_selesai" />
+    <fragment
+        android:id="@+id/fragment_ujian1"
+        android:name="com.dasadarsa.edusmart.Fragment_ujian1"
+        android:label="fragment_ujian1"
+        tools:layout="@layout/fragment_ujian1" />
+    <fragment
+        android:id="@+id/fragment_ujian2"
+        android:name="com.dasadarsa.edusmart.Fragment_ujian2"
+        android:label="fragment_ujian2"
+        tools:layout="@layout/fragment_ujian2" />
 </navigation>

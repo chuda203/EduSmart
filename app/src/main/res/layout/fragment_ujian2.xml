@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment_ujian2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="147dp"
+            android:layout_height="35dp"
+            android:background="@drawable/header_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="end">
+
+            <ImageView
+                android:id="@+id/iv_profile"
+                android:layout_marginEnd="15dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/header_2" />
+
+            <ImageView
+                android:id="@+id/iv_notification"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/header_3" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+    <TextView
+        android:id="@+id/tv_activity"
+        android:layout_width="371dp"
+        android:layout_height="467dp"
+        android:layout_margin="20dp"
+        android:layout_marginVertical="30dp"
+        android:background="@drawable/rounded_textview"
+        android:padding="8dp"
+        android:paddingStart="20dp"
+        android:text="Perhatian !! \n - Bacalah soal dengan benar \n - Kerjakan lebih dulu soal yang mudah \n - Selamat Mengerjakan
+\n \n\n SOAL PILIHAN GANDA \n\n 1.Dalam sebuah mobil, ketika mobil bergerak ke depan, maka orang didalam mobil akan cenderung... \n A. \n B. \n C. \n D. \n
+\n 2. Satuan gaya dalam SI adalah... \n A. \n B. \n C. \n D. \n \n 3. Besarnya masa suatu benda adalah 2 kg, maka berapa berat benda tersebut jika diletakkan di permukaan bumi, yaitu..
+\n A. \n B. \n C. \n D. \n\n 4.Dalam sebuah mobil, ketika mobil bergerak ke depan, maka orang didalam mobil akan cenderung... \n A. \n B. \n C. \n D. \n
+\n 5. Satuan gaya dalam SI adalah... \n A. \n B. \n C. \n D. \n \n 6. Besarnya masa suatu benda adalah 2 kg, maka berapa berat benda tersebut jika diletakkan di permukaan bumi, yaitu..
+\n A. \n B. \n C. \n D."
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/cl_header"
+        tools:layout_editor_absoluteX="21dp" />
+
+    <Button
+        android:id="@+id/btn_ujian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="90dp"
+        android:text="SELESAI"
+        android:background="@drawable/button_1"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/tv_activity"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
