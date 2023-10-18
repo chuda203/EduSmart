@@ -5,9 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -18,16 +15,16 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [Home1Fragment.newInstance] factory method to
+ * Use the [HomeC1Fragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Home1Fragment : Fragment() {
+class HomeC1Fragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
     private var recyclerView : RecyclerView? = null
-    private var recyclerViewScoreAdapter : RecyclerViewScoreAdapter? = null
-    private var scoreList = mutableListOf<Score>()
+    private var recyclerViewHomeC1Adapter : RecyclerViewHomeC1Adapter? = null
+    private var homeC1List = mutableListOf<HomeC1>()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,16 +40,16 @@ class Home1Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        var v = inflater.inflate(R.layout.fragment_home1, container, false)
-        val x = inflater.inflate(R.layout.layout_score_list_item, container, false)
+        var v = inflater.inflate(R.layout.fragment_homec1, container, false)
+        val x = inflater.inflate(R.layout.layout_homec1_list_item, container, false)
 
-        scoreList = ArrayList()
+        homeC1List = ArrayList()
 
         recyclerView = v.findViewById<View>(R.id.rvScoreList) as RecyclerView
-        recyclerViewScoreAdapter = RecyclerViewScoreAdapter(this@Home1Fragment, scoreList)
+        recyclerViewHomeC1Adapter = RecyclerViewHomeC1Adapter(this@HomeC1Fragment, homeC1List)
         val  layoutManager : RecyclerView.LayoutManager = GridLayoutManager(context, 2)
         recyclerView!!.layoutManager = layoutManager
-        recyclerView!!.adapter = recyclerViewScoreAdapter
+        recyclerView!!.adapter = recyclerViewHomeC1Adapter
 
         prepareScoreListData()
 
@@ -73,30 +70,30 @@ class Home1Fragment : Fragment() {
     }
 
     private fun prepareScoreListData(){
-        var score = Score("B.Indonesia", R.drawable.home_1)
-        scoreList.add(score)
-        score = Score("Biologi", R.drawable.home_1)
-        scoreList.add(score)
-        score = Score("Matematika", R.drawable.home_1)
-        scoreList.add(score)
-        score = Score("Fisika", R.drawable.home_1)
-        scoreList.add(score)
-        score = Score("Kimia", R.drawable.home_1)
-        scoreList.add(score)
-        score = Score("B.Inggris", R.drawable.home_1)
-        scoreList.add(score)
-        score = Score("B.Prancis", R.drawable.home_1)
-        scoreList.add(score)
-        score = Score("Sejarah", R.drawable.home_1)
-        scoreList.add(score)
-        score = Score("Sosiologi", R.drawable.home_1)
-        scoreList.add(score)
-        score = Score("Kesenian", R.drawable.home_1)
-        scoreList.add(score)
-        score = Score("Jasmani", R.drawable.home_1)
-        scoreList.add(score)
+        var homeC1 = HomeC1("B.Indonesia", R.drawable.home_1)
+        homeC1List.add(homeC1)
+        homeC1 = HomeC1("Biologi", R.drawable.home_1)
+        homeC1List.add(homeC1)
+        homeC1 = HomeC1("Matematika", R.drawable.home_1)
+        homeC1List.add(homeC1)
+        homeC1 = HomeC1("Fisika", R.drawable.home_1)
+        homeC1List.add(homeC1)
+        homeC1 = HomeC1("Kimia", R.drawable.home_1)
+        homeC1List.add(homeC1)
+        homeC1 = HomeC1("B.Inggris", R.drawable.home_1)
+        homeC1List.add(homeC1)
+        homeC1 = HomeC1("B.Prancis", R.drawable.home_1)
+        homeC1List.add(homeC1)
+        homeC1 = HomeC1("Sejarah", R.drawable.home_1)
+        homeC1List.add(homeC1)
+        homeC1 = HomeC1("Sosiologi", R.drawable.home_1)
+        homeC1List.add(homeC1)
+        homeC1 = HomeC1("Kesenian", R.drawable.home_1)
+        homeC1List.add(homeC1)
+        homeC1 = HomeC1("Jasmani", R.drawable.home_1)
+        homeC1List.add(homeC1)
 
-        recyclerViewScoreAdapter!!.notifyDataSetChanged()
+        recyclerViewHomeC1Adapter!!.notifyDataSetChanged()
 
     }
 
@@ -112,7 +109,7 @@ class Home1Fragment : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Home1Fragment().apply {
+            HomeC1Fragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

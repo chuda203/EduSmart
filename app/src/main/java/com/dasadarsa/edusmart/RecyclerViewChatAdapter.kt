@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -28,7 +27,7 @@ class RecyclerViewChatAdapter constructor(private val getActivity: ChatFragment,
 
         holder.cardView.setOnClickListener {
             val fragmentTransaction = getActivity.parentFragmentManager.beginTransaction()
-            val targetFragment = Chat1Fragment()
+            val targetFragment = ChatA1Fragment()
             fragmentTransaction.replace(R.id.fragment_container, targetFragment)
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
