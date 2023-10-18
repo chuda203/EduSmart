@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
+import androidx.fragment.app.FragmentTransaction
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,8 +37,22 @@ class Fragment_ujian1 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ujian1, container, false)
+        val v = inflater.inflate(R.layout.fragment_ujian1, container, false)
+        val bt = v.findViewById<Button>(R.id.btn_ujian)
+        bt.setOnClickListener{
+            val Fragment_ujian2 = Fragment_ujian2()
+            val transaction : FragmentTransaction = requireFragmentManager().beginTransaction()
+            transaction.replace(R.id.fragment_container,Fragment_ujian2)
+            transaction.addToBackStack(null)
+            transaction.commit()
+
+        }
+        return v
     }
+
+
+
+
 
     companion object {
         /**

@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.FragmentTransaction
 
 // TODO: Rename parameter arguments, choose names that match
@@ -15,10 +15,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [Fragment_selesai.newInstance] factory method to
+ * Use the [CourseA2Fragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Fragment_selesai : Fragment() {
+class CourseA2Fragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -36,21 +36,27 @@ class Fragment_selesai : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val v =  inflater.inflate(R.layout.fragment_selesai, container, false)
-        val bt = v.findViewById<Button>(R.id.btn_ujian)
-        bt.setOnClickListener{
-            val Fragment_selesai = Fragment_selesai()
-            val transaction : FragmentTransaction = requireFragmentManager().beginTransaction()
-            transaction.replace(R.id.fragment_container,Fragment_selesai)
+        val v = inflater.inflate(R.layout.fragment_course_a2, container, false)
+
+        val bt = v.findViewById<CardView>(R.id.cardViewMateri)
+        val bt1 = v.findViewById<CardView>(R.id.cardViewTugasBab1Fisika)
+        bt.setOnClickListener {
+            val CourseA3Fragment = CourseA3Fragment()
+            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
+            transaction.replace(R.id.fragment_container, CourseA3Fragment)
             transaction.addToBackStack(null)
             transaction.commit()
-
         }
-
+        bt1.setOnClickListener {
+            val CourseA3Fragment = CourseA3Fragment()
+            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
+            transaction.replace(R.id.fragment_container, CourseA3Fragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
         return v
 
     }
-
 
     companion object {
         /**
@@ -59,12 +65,12 @@ class Fragment_selesai : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment Fragment_selesai.
+         * @return A new instance of fragment CourseA2Fragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Fragment_selesai().apply {
+            CourseA2Fragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

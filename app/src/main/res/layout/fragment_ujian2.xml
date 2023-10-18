@@ -5,53 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="60dp"
+    android:paddingBottom="80dp"
     tools:context=".Fragment_ujian2">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cl_header"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <ImageView
-            android:id="@+id/iv_search"
-            android:layout_width="147dp"
-            android:layout_height="35dp"
-            android:background="@drawable/header_1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:gravity="end">
-
-            <ImageView
-                android:id="@+id/iv_profile"
-                android:layout_marginEnd="15dp"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:background="@drawable/header_2" />
-
-            <ImageView
-                android:id="@+id/iv_notification"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:background="@drawable/header_3" />
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/sv_ujian"
-        app:layout_constraintTop_toBottomOf="@id/cl_header">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_ujian"
+        android:paddingBottom="50dp">
 
     <TextView
         android:id="@+id/tv_activity"
@@ -78,14 +43,14 @@
         android:id="@+id/btn_ujian"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginHorizontal="90dp"
-        android:text="SELESAI"
         android:background="@drawable/button_1"
-        android:textStyle="bold"
-        android:textSize="20sp"
+        android:text="SELESAI"
         android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/sv_ujian"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    "
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
