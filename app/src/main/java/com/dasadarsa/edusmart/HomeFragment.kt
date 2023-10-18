@@ -39,7 +39,7 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         val v = inflater.inflate(R.layout.fragment_home, container, false)
 
-        val bt = v.findViewById<ImageView>(R.id.img_home1)
+        val bt = v.findViewById<ImageView>(R.id.ll_banner3)
         bt.setOnClickListener{
             val Home1Fragment = Home1Fragment()
             val transaction : FragmentTransaction = requireFragmentManager().beginTransaction()
