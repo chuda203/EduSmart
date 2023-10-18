@@ -82,6 +82,8 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteX="16dp" />
 
     <TextView
@@ -96,6 +98,13 @@
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@+id/tv_activity"
         />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/sv_homepage"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ujian"
+        app:layout_constraintBottom_toBottomOf="parent"></ScrollView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_banner"
@@ -227,7 +236,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/iv_banner"
+                android:id="@+id/iv_banner3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
@@ -240,7 +249,7 @@
                 android:background="@color/black" />
 
             <LinearLayout
-                android:id="@+id/ll_banner1"
+                android:id="@+id/ll_banner3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -260,16 +269,15 @@
                     android:textStyle="bold" />
 
                 <ImageView
-                    android:id="@+id/iv_materibaru"
+                    android:id="@+id/iv_materibaru3"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:src="@drawable/daftarnilaikamu" />
             </LinearLayout>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
-    <View
+<View
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@drawable/button_4"
@@ -310,4 +318,3 @@
         android:elevation="-1dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
