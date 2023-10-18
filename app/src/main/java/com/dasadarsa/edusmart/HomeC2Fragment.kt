@@ -40,7 +40,7 @@ class HomeC2Fragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-        val v = inflater.inflate(R.layout.fragment_homec2, container, false)
+        val v = inflater.inflate(R.layout.fragment_home_c2, container, false)
 
         subscoreList = ArrayList()
 

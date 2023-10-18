@@ -40,8 +40,8 @@ class HomeC1Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        var v = inflater.inflate(R.layout.fragment_homec1, container, false)
-        val x = inflater.inflate(R.layout.layout_homec1_list_item, container, false)
+        var v = inflater.inflate(R.layout.fragment_home_c1, container, false)
+        val x = inflater.inflate(R.layout.layout_home_c1_list_item, container, false)
 
         homeC1List = ArrayList()
 

@@ -12,7 +12,7 @@ class RecyclerViewHomeC1Adapter constructor(private val getActivity: HomeC1Fragm
     RecyclerView.Adapter<RecyclerViewHomeC1Adapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_homec1_list_item, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_home_c1_list_item, parent, false)
         return MyViewHolder(view)
     }
 
