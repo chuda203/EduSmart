@@ -13,8 +13,8 @@ class LoginActivity : AppCompatActivity() {
         val btnStart = findViewById<Button>(R.id.button_login)
 
         btnStart.setOnClickListener {
-            Intent(this, MainActivity::class.java).also {
-                startActivity(it)
+            Intent(this, HomeFragment::class.java).also {
+                startActivity(intent)
             }
         }
     }

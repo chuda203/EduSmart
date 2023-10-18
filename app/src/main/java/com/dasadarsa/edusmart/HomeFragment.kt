@@ -1,5 +1,6 @@
 package com.dasadarsa.edusmart
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -38,7 +39,6 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val v = inflater.inflate(R.layout.fragment_home, container, false)
-
         val bt = v.findViewById<ImageView>(R.id.ll_banner3)
         bt.setOnClickListener{
             val Home1Fragment = Home1Fragment()
@@ -51,6 +51,7 @@ class HomeFragment : Fragment() {
 
         return v
     }
+
 
     companion object {
         /**
