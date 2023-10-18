@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -16,16 +15,16 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [Home2Fragment.newInstance] factory method to
+ * Use the [HomeC2Fragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Home2Fragment : Fragment() {
+class HomeC2Fragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
     private var recyclerView : RecyclerView? = null
-    private var recyclerViewSubScoreAdapter : RecyclerViewSubScoreAdapter? = null
-    private var subscoreList = mutableListOf<SubScore>()
+    private var recyclerViewHomeC2Adapter : RecyclerViewHomeC2Adapter? = null
+    private var subscoreList = mutableListOf<HomeC2>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,15 +40,15 @@ class Home2Fragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-        val v = inflater.inflate(R.layout.fragment_home2, container, false)
+        val v = inflater.inflate(R.layout.fragment_home_c2, container, false)
 
         subscoreList = ArrayList()
 
         recyclerView = v.findViewById<View>(R.id.rvSubScoreList) as RecyclerView
-        recyclerViewSubScoreAdapter = RecyclerViewSubScoreAdapter(this@Home2Fragment, subscoreList)
+        recyclerViewHomeC2Adapter = RecyclerViewHomeC2Adapter(this@HomeC2Fragment, subscoreList)
         val  layoutManager : RecyclerView.LayoutManager = LinearLayoutManager(context)
         recyclerView!!.layoutManager = layoutManager
-        recyclerView!!.adapter = recyclerViewSubScoreAdapter
+        recyclerView!!.adapter = recyclerViewHomeC2Adapter
 
         prepareScoreListData()
 
@@ -57,30 +56,30 @@ class Home2Fragment : Fragment() {
     }
 
     private fun prepareScoreListData(){
-        var subscore = SubScore("Tugas 1", R.drawable.home_1)
+        var subscore = HomeC2("Tugas 1", R.drawable.home_1)
         subscoreList.add(subscore)
-        subscore = SubScore("Ulangan Harian 1", R.drawable.home_1)
+        subscore = HomeC2("Ulangan Harian 1", R.drawable.home_1)
         subscoreList.add(subscore)
-        subscore = SubScore("Tugas 2", R.drawable.home_1)
+        subscore = HomeC2("Tugas 2", R.drawable.home_1)
         subscoreList.add(subscore)
-        subscore = SubScore("UTS", R.drawable.home_1)
+        subscore = HomeC2("UTS", R.drawable.home_1)
         subscoreList.add(subscore)
-        subscore = SubScore("UAS", R.drawable.home_1)
+        subscore = HomeC2("UAS", R.drawable.home_1)
         subscoreList.add(subscore)
-        subscore = SubScore("Ujian Praktik", R.drawable.home_1)
+        subscore = HomeC2("Ujian Praktik", R.drawable.home_1)
         subscoreList.add(subscore)
-        subscore = SubScore("Kehadiran", R.drawable.home_1)
+        subscore = HomeC2("Kehadiran", R.drawable.home_1)
         subscoreList.add(subscore)
-        subscore = SubScore("Sikap", R.drawable.home_1)
+        subscore = HomeC2("Sikap", R.drawable.home_1)
         subscoreList.add(subscore)
-        subscore = SubScore("Tambahan", R.drawable.home_1)
+        subscore = HomeC2("Tambahan", R.drawable.home_1)
         subscoreList.add(subscore)
-        subscore = SubScore("Konsistensi", R.drawable.home_1)
+        subscore = HomeC2("Konsistensi", R.drawable.home_1)
         subscoreList.add(subscore)
-        subscore = SubScore("Nilai Akhir", R.drawable.home_1)
+        subscore = HomeC2("Nilai Akhir", R.drawable.home_1)
         subscoreList.add(subscore)
 
-        recyclerViewSubScoreAdapter!!.notifyDataSetChanged()
+        recyclerViewHomeC2Adapter!!.notifyDataSetChanged()
 
     }
 
@@ -96,7 +95,7 @@ class Home2Fragment : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Home2Fragment().apply {
+            HomeC2Fragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

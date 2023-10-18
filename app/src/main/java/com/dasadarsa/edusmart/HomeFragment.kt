@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import androidx.fragment.app.FragmentTransaction
 
@@ -41,9 +40,9 @@ class HomeFragment : Fragment() {
         val v = inflater.inflate(R.layout.fragment_home, container, false)
         val bt = v.findViewById<ImageView>(R.id.iv_banner3)
         bt.setOnClickListener{
-            val Home1Fragment = Home1Fragment()
+            val HomeC1Fragment = HomeC1Fragment()
             val transaction : FragmentTransaction = requireFragmentManager().beginTransaction()
-            transaction.replace(R.id.fragment_container,Home1Fragment)
+            transaction.replace(R.id.fragment_container,HomeC1Fragment)
             transaction.addToBackStack(null)
             transaction.commit()
 

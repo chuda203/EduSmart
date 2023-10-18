@@ -5,25 +5,34 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerViewSubScoreAdapter constructor(private val getActivity: Home2Fragment, private val subscoreList: List<SubScore>) :
-    RecyclerView.Adapter<RecyclerViewSubScoreAdapter.MyViewHolder>() {
+class RecyclerViewHomeC1Adapter constructor(private val getActivity: HomeC1Fragment, private val homeC1List: List<HomeC1>) :
+    RecyclerView.Adapter<RecyclerViewHomeC1Adapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_subscore_list_item, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_home_c1_list_item, parent, false)
         return MyViewHolder(view)
     }
 
     override fun getItemCount(): Int {
-        return subscoreList.size
+        return homeC1List.size
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.tvScoreTitle.text = subscoreList[position].title
-        holder.ivScoreImg.setImageResource(subscoreList[position].image)
+        holder.tvScoreTitle.text = homeC1List[position].title
+        holder.ivScoreImg.setImageResource(homeC1List[position].image)
+
+        holder.cardView.setOnClickListener {
+            val fragmentTransaction = getActivity.parentFragmentManager.beginTransaction()
+            val targetFragment = HomeC2Fragment()
+            fragmentTransaction.replace(R.id.fragment_container, targetFragment)
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
+
+        }
+
 
 //        holder.cardView.setOnClickListener {
 //            Toast.makeText(getActivity, scoreList[position].title, Toast.LENGTH_LONG).show()
