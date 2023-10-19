@@ -125,7 +125,7 @@
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/btn_ujian"
+            android:id="@+id/btn_logout"
             android:layout_width="161dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="90dp"

@@ -43,6 +43,8 @@ class HomeFragment : Fragment() {
         val bt = v.findViewById<TextView>(R.id.tv_activity)
         val bt1 = v.findViewById<CardView>(R.id.cv_banner3)
         val bt2 = v.findViewById<ImageView>(R.id.tv_profile)
+        val bt3 = v.findViewById<CardView>(R.id.cv_banner2)
+        val bt4 = v.findViewById<CardView>(R.id.cv_banner)
         bt.setOnClickListener{
             val Fragment_ujian1 = Fragment_ujian1()
             val transaction : FragmentTransaction = requireFragmentManager().beginTransaction()
@@ -63,6 +65,22 @@ class HomeFragment : Fragment() {
             val ProfileFragment = ProfileFragment()
             val transaction : FragmentTransaction = requireFragmentManager().beginTransaction()
             transaction.replace(R.id.fragment_container,ProfileFragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
+
+        }
+        bt3.setOnClickListener{
+            val HomeB1Fragment = HomeB1Fragment()
+            val transaction : FragmentTransaction = requireFragmentManager().beginTransaction()
+            transaction.replace(R.id.fragment_container,HomeB1Fragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
+
+        }
+        bt4.setOnClickListener{
+            val CourseFragment = CourseFragment()
+            val transaction : FragmentTransaction = requireFragmentManager().beginTransaction()
+            transaction.replace(R.id.fragment_container,CourseFragment)
             transaction.addToBackStack(null)
             transaction.commit()
 

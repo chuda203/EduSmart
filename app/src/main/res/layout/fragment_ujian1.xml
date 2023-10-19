@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingTop="60dp"
+    android:paddingTop="80dp"
     android:paddingBottom="80dp"
     tools:context=".Fragment_ujian1">
 
@@ -76,9 +76,8 @@
         android:layout_margin="20dp"
         android:padding="8dp"
         android:paddingStart="20dp"
-        android:text="Pastikan QR code terlihat dengan jelas dan \n
-      pastikan lensa kamera anda bersih\n
-           sebelum melakukan scanning"
+        android:text="Pastikan QR code terlihat dengan jelas dan pastikan lensa kamera anda bersih sebelum melakukan scanning"
+        android:gravity="center"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"

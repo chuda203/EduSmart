@@ -6,6 +6,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
+import android.annotation.SuppressLint
+import android.content.pm.PackageManager
+import androidx.appcompat.app.AppCompatActivity
+import android.view.SurfaceHolder
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
+import android.widget.Button
+import android.widget.Toast
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.FragmentTransaction
+import java.io.IOException
+import com.google.android.gms.vision.CameraSource
+import com.google.android.gms.vision.Detector
+import com.google.android.gms.vision.barcode.Barcode
+import com.google.android.gms.vision.barcode.BarcodeDetector
+import com.google.android.gms.vision.Detector.Detections
+
+import com.dasadarsa.edusmart.databinding.FragmentScanBinding
+
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
@@ -21,6 +41,10 @@ class ScanFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private var _binding: FragmentScanBinding? = null
+    private val binding get() = _binding!!
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -34,8 +58,26 @@ class ScanFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_scan, container, false)
+        _binding = FragmentScanBinding.inflate(inflater, container, false)
+
+        val bt = binding.buttonScan
+        bt.setOnClickListener{
+            val scanA1Fragment = ScanA1Fragment()
+            val transaction : FragmentTransaction = requireFragmentManager().beginTransaction()
+            transaction.replace(R.id.fragment_container,scanA1Fragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
+
+        }
+
+
+        return binding.root
+
+
+
+
     }
+
 
     companion object {
         /**
