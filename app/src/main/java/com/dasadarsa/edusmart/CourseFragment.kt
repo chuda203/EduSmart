@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageView
+import androidx.fragment.app.FragmentTransaction
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +37,18 @@ class CourseFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_course, container, false)
+        val v = inflater.inflate(R.layout.fragment_course, container, false)
+
+        val bt = v.findViewById<Button>(R.id.seninindo)
+        bt.setOnClickListener {
+            val CourseA1Fragment = CourseA1Fragment()
+            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
+            transaction.replace(R.id.fragment_container, CourseA1Fragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
+        return v
+
     }
 
     companion object {

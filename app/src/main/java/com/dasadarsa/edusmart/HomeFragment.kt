@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.FragmentTransaction
 
 // TODO: Rename parameter arguments, choose names that match
@@ -38,8 +40,18 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val v = inflater.inflate(R.layout.fragment_home, container, false)
-        val bt = v.findViewById<ImageView>(R.id.iv_banner3)
+        val bt = v.findViewById<TextView>(R.id.tv_activity)
+        val bt1 = v.findViewById<CardView>(R.id.cv_banner3)
+        val bt2 = v.findViewById<ImageView>(R.id.tv_profile)
         bt.setOnClickListener{
+            val Fragment_ujian1 = Fragment_ujian1()
+            val transaction : FragmentTransaction = requireFragmentManager().beginTransaction()
+            transaction.replace(R.id.fragment_container,Fragment_ujian1)
+            transaction.addToBackStack(null)
+            transaction.commit()
+
+        }
+        bt1.setOnClickListener{
             val HomeC1Fragment = HomeC1Fragment()
             val transaction : FragmentTransaction = requireFragmentManager().beginTransaction()
             transaction.replace(R.id.fragment_container,HomeC1Fragment)
@@ -47,6 +59,15 @@ class HomeFragment : Fragment() {
             transaction.commit()
 
         }
+        bt2.setOnClickListener{
+            val ProfileFragment = ProfileFragment()
+            val transaction : FragmentTransaction = requireFragmentManager().beginTransaction()
+            transaction.replace(R.id.fragment_container,ProfileFragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
+
+        }
+
 
         return v
     }

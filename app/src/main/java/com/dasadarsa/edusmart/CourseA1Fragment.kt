@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.FragmentTransaction
 
 // TODO: Rename parameter arguments, choose names that match
@@ -15,10 +16,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [Fragment_selesai.newInstance] factory method to
+ * Use the [CourseA1Fragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Fragment_selesai : Fragment() {
+class CourseA1Fragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -36,21 +37,18 @@ class Fragment_selesai : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val v =  inflater.inflate(R.layout.fragment_selesai, container, false)
-        val bt = v.findViewById<Button>(R.id.btn_ujian)
-        bt.setOnClickListener{
-            val Fragment_selesai = Fragment_selesai()
-            val transaction : FragmentTransaction = requireFragmentManager().beginTransaction()
-            transaction.replace(R.id.fragment_container,Fragment_selesai)
+        val v = inflater.inflate(R.layout.fragment_course_a1, container, false)
+
+        val bt = v.findViewById<CardView>(R.id.cardView5)
+        bt.setOnClickListener {
+            val CourseA2Fragment = CourseA2Fragment()
+            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
+            transaction.replace(R.id.fragment_container, CourseA2Fragment)
             transaction.addToBackStack(null)
             transaction.commit()
-
         }
-
-        return v
-
+        return  v
     }
-
 
     companion object {
         /**
@@ -59,12 +57,12 @@ class Fragment_selesai : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment Fragment_selesai.
+         * @return A new instance of fragment CourseA1Fragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Fragment_selesai().apply {
+            CourseA1Fragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
