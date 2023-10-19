@@ -15,7 +15,14 @@
     <string name="login_9">Masuk</string>
     <string name="login_10">Belum punya akun?</string>
     <string name="login_11">Reset</string>
+
     <string name="home_1">Nilai</string>
+    <string name="home_2">Absensi</string>
+    <string name="home_3">Libur</string>
+    <string name="home_4">Izin</string>
+    <string name="home_5">Sakit</string>
+    <string name="home_6">Alfa</string>
+    <string name="home_7">V</string>
 
 
     <string name="nilai_1">B. Indonesia</string>
@@ -39,6 +46,12 @@
     <string name="chat_8">Yeni Nuryeni, S.Pd</string>
     <string name="chat_9">Risma Puji, S.Pd</string>
     <string name="chat_10">Cari</string>
+
+
+    <string name="scan_1">Nanda Aprillia Lestari</string>
+    <string name="scan_2">20210810159</string>
+    <string name="scan_3">Pastikan QR Code terlihat dengan jelas dan pastikan lensa kamera anda bersih sebelum melakukan scanning</string>
+    <string name="scan_4">Scan QR</string>
 
 
     //description
