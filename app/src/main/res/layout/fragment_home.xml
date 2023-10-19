@@ -205,15 +205,4 @@
     </ScrollView>
 
 
-    <ImageView
-        android:id="@+id/img_login3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/login_4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/desc_4"
-        android:elevation="-1dp"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
